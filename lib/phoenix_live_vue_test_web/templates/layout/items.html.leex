@@ -1,0 +1,6 @@
+<%= for item <- @items do %>
+  <div class="item" phx-hook="ItemMounter">
+    <item :initial-content="<%= item %>" ></item>
+  </div>
+<% end %>
+<%= content_tag :button, "More", "phx-click": "inc" %>
